@@ -19,6 +19,7 @@ this project is web application show the user pitches and to see others people p
 
 0786679517
 
+virgm2020@gmail.com
 
 
 ### link to live site on GitHub Pages

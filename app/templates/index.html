@@ -33,7 +33,7 @@
         <hr>
         <P> pitch Promotion </P>
         <p>A  relationship with a sales promotion agency normally starts with a pitch.</p>
-        <br><br>
+        <br>
         <a href= "{{url_for('main.newpitch')}}"> New pitch</a>
     </div>   
 
@@ -42,13 +42,15 @@
 {% for pitch in all_pitches %}
     
     <h2> {{ pitch.pitches}} </h2>
-    <!-- <p> {{ pitch.user }}</p> -->
-
+  <a href="/pitch/{{pitch.id}}"> View pitch</a>
+    {% for comment in pitch.comment %}
+    <p>Comment:{{comment.comment}}</p>
+    
+{% endfor %}
+<p><a class="btn btn-light btn-xl sr-button" href="{{url_for('main.comment',id = pitch.id)}}"> Add comment here</a></p> 
 {% endfor %}
 
 
-
-<!-- {{ macro.displayPitchList(pitches)}}   -->
 
        
 </ul>

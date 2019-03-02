@@ -7,20 +7,18 @@ from wtforms import ValidationError
 
 
 
-# class ReviewForm(FlaskForm):
+class CommentForm(FlaskForm):
 
-#     title = StringField(' title',validators=[Required()])
-#     review = TextAreaField(' review', validators=[Required()])
-#     submit = SubmitField('Submit')
+    title = StringField(' title',validators=[Required()])
+    comment= TextAreaField(' review', validators=[Required()])
+    submit = SubmitField('Submit')
 
 class UpdateProfile(FlaskForm):
     bio = TextAreaField('Tell us about you.',validators = [Required()])
     submit = SubmitField('Submit')   
 
 
-
 class PitchForm(FlaskForm):
-
     
     pitch = TextAreaField(' pitch', validators=[Required()])
     submit = SubmitField('Submit')

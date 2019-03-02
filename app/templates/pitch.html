@@ -1,0 +1,17 @@
+
+ {% extends 'base.html'%}  
+ {% import 'macros.html' as macro%}
+ {% block content %}
+<div class="container hh">
+    <img src="static/photos/no_dp.png" alt="">
+    <p class="name">{{pitch.user.username}}</p>
+    <h4>{{pitch.description}}</h4>
+    <p>Upvotes:{{pitch.upvotes}}</p>
+  <p>Downvotes:{{pitch.downvotes}}</p>
+    <button >Upvote</button>
+    <button>Downvote</button>
+    <a href="/comment/new/{{pitch.id}}" class="btn btn-primary">Add comment</a>
+    {{macro.displayComments(comments)}}
+
+    {%endblock%}
+</div>
