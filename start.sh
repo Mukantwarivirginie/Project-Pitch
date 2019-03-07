@@ -4,5 +4,5 @@ export SECRET_KEY=459032567895562334
 
 
 export MAIL_USERNAME=virgm2020
-export MAIL_PASSWORD=iradukundak0
+export MAIL_PASSWORD=......
 python3.6 manage.py server 
